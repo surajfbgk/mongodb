@@ -7,7 +7,7 @@ var btnVideo=document.querySelector('#btn-video');
 
 btnVideo.addEventListener("click",()=>{
     try {
-        navigator.mediaDevices.getUserMedia({video:true,audio:true}).then((stream)=>{
+        navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"},audio:true}).then((stream)=>{
             video.srcObject=stream;
         });
     } catch (error) {
