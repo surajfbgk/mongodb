@@ -18,7 +18,7 @@ btnVideo.addEventListener("click",()=>{
 btnCapture.addEventListener("click",()=>{
     try {
         var obj=canvas.getContext("2d");
-        obj.drawImage(video,0,0,720,640);
+        obj.drawImage(video,0,0,window.innerWidth,window.innerHeight);
     } catch (error) {
         alert(error);
     }
